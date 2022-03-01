@@ -1,0 +1,38 @@
+nav {
+  height: 120px;
+  width: 100%;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  padding: 0em 1.5em; 
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+h1 {
+  font-family: bungee, sans-serif;
+  font-weight: 400;
+}
+.newTweet {
+  font-family: Roboto, sans-serif;  
+  margin: 40px 0px 0px  
+}
+.arrow {
+  color: red;  
+}
+.bold {
+  font-weight: 600;
+}
+h2 {
+  font-family: Roboto, sans-serif;
+  color: white;
+  font-weight: 300;
+  margin: 0px;
+  padding: 0px;
+}
+.newTweet-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

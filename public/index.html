@@ -7,8 +7,20 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
 
+    <!-- Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="styles/new-tweet.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -18,12 +30,41 @@
   </head>
 
   <body>
-    <!-- Top nav bar (fixed) -->
-    <nav>
-      <span>tweeter</span>
+    <!-- Top nav bar (fixed) -->  
+    <nav class="nav-container">
+      <h1>tweeter</h1>
+      <div class="newTweet-container">
+        <div class="newTweet"><span class="bold">Write</span> a new tweet</div>
+        <i class="arrow fa-solid fa-angles-down"></i>
+      </div>      
     </nav>
 
+    <!-- Header -->
+    <header>
+      <div>
+          <img class="avatar" src="images/profile-hex.png"> 
+      </div>
+      <br>
+      <div>
+          <h2><span class="bold">Travis</span> Pirozzini</h2>
+      </div>
+    </header>     
+
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <main class="container">
+      <section class="new-tweet">
+        <h2 class="main-title">Compose Tweet</h2>
+        <form action="/tweets/" method="post">
+          <label class="label" for="tweet-text">What are you humming about?</label>
+          <textarea name="text" id="tweet-text" placeholder="Enter Tweet Here..."></textarea>
+          <div class="btn-container">
+            <button class="tweet-btn" type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>      
+    </main>
+
+
   </body>
 </html>
