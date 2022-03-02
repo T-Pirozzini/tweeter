@@ -28,6 +28,8 @@
   background-color:#f4f1ec; 
   border: 0px;
   border-bottom: 4px solid gray;
+  font-family: Roboto, sans-serif;
+  padding-top: 10px;
 }
 .btn-container {
   display: flex;
