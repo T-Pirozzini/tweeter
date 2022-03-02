@@ -1,24 +1,26 @@
-.container {
-  height: 200px;
+.main-container {
+  height: auto;
   width: 90%;  
   margin: auto;
   background-color: #f4f1ec;
   /* border: 2px solid coral;  */
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
-.new-tweet {
+.new-tweet-container {
   width: 100%;
   margin: auto;  
 }
-.main-title {  
+.compose-title {  
   text-align: center;
   color: gray;
+  padding: 20px; 
 }
 .label {
   font-family: Roboto, sans-serif;
-  font-weight: 800;    
+  font-weight: 800;     
 }
 #tweet-text {
   height: 40px;

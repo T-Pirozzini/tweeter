@@ -17,10 +17,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- App CSS -->
-    <link rel="stylesheet" href="styles/layout.css" type="text/css" />
-    <link rel="stylesheet" href="styles/nav.css" type="text/css" />
-    <link rel="stylesheet" href="styles/header.css" type="text/css" />
-    <link rel="stylesheet" href="styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="styles/layout.css" type="text/css"/>
+    <link rel="stylesheet" href="styles/nav.css" type="text/css"/>
+    <link rel="stylesheet" href="styles/header.css" type="text/css"/>
+    <link rel="stylesheet" href="styles/new-tweet.css" type="text/css"/>
+    <link rel="stylesheet" href="styles/tweets.css" type="text/css"/>
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -52,9 +53,9 @@
     </header>     
 
     <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
-        <h2 class="main-title">Compose Tweet</h2>
+    <main class="main-container">
+      <section class="new-tweet-container">
+        <h2 class="compose-title">Compose Tweet</h2>
         <form class="tweet-form" action="/tweets/" method="post">
           <label class="label" for="tweet-text">What are you humming about?</label>
           <textarea id="tweet-text" class='text' name="text" placeholder="Enter Tweet Here..."></textarea>
@@ -63,7 +64,41 @@
             <output class="counter" name="counter" for="tweet-text">140</output>
           </div>
         </form>
-      </section>      
+      </section>
+
+      <!-- tweets content here -->
+      <article class="tweet-container">
+        <section class="handler-container">
+          <h3 class="user"><i class="avatar-mini fa-solid fa-user-astronaut"></i> Rhoda Jacobs</h3>          
+          <h3 class="handle">@MrsJacobs</h3>
+        </section>        
+        <h3 class="tweet-output-text">Hello world!</h3>      
+        <div class="tweet-footer-container">
+          <div class="creation-date">10 days ago</div>
+          <div class="icons-container">
+            <i class="icon fas fa-flag"></i>
+            <i class="icon fas fa-retweet"></i>
+            <i class="icon fas fa-heart"></i>
+          </div>          
+        </div>
+      </article>
+      <article class="tweet-container">
+        <section class="handler-container">
+          
+          <h3 class="user"><i class="avatar-mini fa-solid fa-user-ninja"></i> Newton</h3>          
+          <h3 class="handle">@SirIsaac</h3>
+        </section>        
+        <h3 class="tweet-output-text">If I have seen further it is by standing on the shoulders of giants.</h3>      
+        <div class="tweet-footer-container">
+          <div class="creation-date">5 days ago</div>
+          <div class="icons-container">
+            <i class="icon fas fa-flag"></i>
+            <i class="icon fas fa-retweet"></i>
+            <i class="icon fas fa-heart"></i>
+          </div>          
+        </div>
+      </article> 
+
     </main>
 
     <script type="text/javascript" src="/tweeter/public/scripts/composer-char-counter.js"></script>
