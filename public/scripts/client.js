@@ -69,13 +69,19 @@ $(() => {
     event.preventDefault();    
     console.log("Data", $tweetForm.serialize());
     const data = $tweetForm.serialize();
-    console.log("The form was submitted");    
+    console.log("The form was submitted");       
 
-    $.ajax({    
-      url: '/tweets',
-      method: 'POST',
-      data: data      
-    });
+    if (data.length <= 5) {
+      alert("Please enter a tweet")
+    } else if (data.length > 140) {
+      alert("Your tweet has exceeded maximum length")
+    } else {
+      $.ajax({    
+        url: '/tweets',
+        method: 'POST',
+        data: data      
+      });
+    }    
     // $tweetForm.val('').focus();
   });
 
