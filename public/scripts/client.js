@@ -32,6 +32,12 @@ $(() => {
 
   const $tweetsContainer = $('div.tweets-container');
 
+  // const escape = function (str) {
+  //   let div = document.createElement("div");
+  //   div.appendChild(document.createTextNode(str));
+  //   return div.innerHTML;
+  // };
+
   const renderTweets = (tweets) => {    
       for (let tweet of tweets){      
         const newTweet = createTweetElement(tweet);
@@ -105,7 +111,11 @@ $(() => {
       })
     };
     
-  loadTweets();   
+  loadTweets(); 
+  
+  $('.arrow-up').on('click', () => {
+    $(window).scrollTop(top);
+  });
 
 
 });  

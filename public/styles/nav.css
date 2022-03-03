@@ -23,8 +23,20 @@ h1 {
   font-family: Roboto, sans-serif;  
   margin: 40px 0px 0px  
 }
+@keyframes updown {
+  0% {
+    transform: translateY(-30%);
+  }
+  50% {
+    transform: translateY(30%);
+  }
+  100% {
+    transform: translateY(-30%);
+  }
+}
 .arrow {
-  color: red;  
+  color: red;
+  animation: updown 2s ease infinite;  
 }
 .bold {
   font-weight: 600;

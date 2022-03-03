@@ -77,6 +77,27 @@
   align-self: center;
   display: none;
 }
+@keyframes updown {
+  0% {
+    transform: translateY(-30%);
+  }
+  50% {
+    transform: translateY(30%);
+  }
+  100% {
+    transform: translateY(-30%);
+  }
+}
+.arrow-up {
+  color: rgb(224, 39, 76);
+  animation: updown 2s ease infinite;
+  text-align: right;   
+}
+.arrow-up:hover {  
+  cursor: pointer;  
+  color: red;
+  font-weight: 800;
+}
 
 
 /* Tablet styles */
