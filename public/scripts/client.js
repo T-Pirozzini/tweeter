@@ -60,8 +60,7 @@ $(() => {
     return $tweet;
   };  
   
-  renderTweets(data);  
-
+  renderTweets(data);
 
   const $tweetForm = $('form');
   
@@ -80,24 +79,26 @@ $(() => {
         url: '/tweets',
         method: 'POST',
         data: data      
-      });
-    }    
-    // $tweetForm.val('').focus();
+      }).then(() => {
+        console.log('Tweet sent successfully');        
+        $('.tweet-text').val("").focus();
+        loadTweets();
+      });      
+    };    
   });
 
   const loadTweets = () => {
     $.ajax({
       url: '/tweets',
       method: 'GET'      
-    }).then((tweets) => { 
-        renderTweets(tweets);
+    }).then((tweets) => {        
+        renderTweets(tweets);                
       }).catch((error) => {
         console.log("Error", error);
       })
-     };
+    };
     
-     loadTweets();
-
+  loadTweets();   
 
 
 });  
