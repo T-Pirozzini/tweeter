@@ -72,11 +72,11 @@ $(() => {
 
     if (data.length <= 5) {
       //alert("Please enter a tweet")
-      $(".no-text-error").html("Please enter a tweet").toggle();
+      $(".no-text-error").html("Please enter a tweet").slideDown("slow");
       $(".max-text-error").hide();
     } else if (data.length > 145) {
       //alert("Your tweet has exceeded maximum length")
-      $(".max-text-error").html("Your tweet has exceeded maximum length").toggle();
+      $(".max-text-error").html("Your tweet is too long").slideDown("slow");
       $(".no-text-error").hide();
     } else {
       $.ajax({    
