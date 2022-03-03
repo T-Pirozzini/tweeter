@@ -25,7 +25,8 @@
 #tweet-text {
   height: 40px;
   width: 100%;
-  background-color:#f4f1ec; 
+  background-color:#f4f1ec;
+  outline: none; 
   border: 0px;
   border-bottom: 4px solid gray;
   font-family: Roboto, sans-serif;
