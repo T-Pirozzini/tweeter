@@ -71,15 +71,21 @@ $(() => {
     console.log("The form was submitted");       
 
     if (data.length <= 5) {
-      alert("Please enter a tweet")
-    } else if (data.length > 140) {
-      alert("Your tweet has exceeded maximum length")
+      //alert("Please enter a tweet")
+      $(".no-text-error").html("Please enter a tweet").toggle();
+      $(".max-text-error").hide();
+    } else if (data.length > 145) {
+      //alert("Your tweet has exceeded maximum length")
+      $(".max-text-error").html("Your tweet has exceeded maximum length").toggle();
+      $(".no-text-error").hide();
     } else {
       $.ajax({    
         url: '/tweets',
         method: 'POST',
         data: data      
       }).then(() => {
+        $(".no-text-error").hide();
+        $(".max-text-error").hide();
         console.log('Tweet sent successfully');        
         $('.tweet-text').val("").focus();
         loadTweets();
@@ -91,8 +97,9 @@ $(() => {
     $.ajax({
       url: '/tweets',
       method: 'GET'      
-    }).then((tweets) => {        
-        renderTweets(tweets);                
+    }).then((tweets) => {
+      $tweetsContainer.empty();        
+      renderTweets(tweets);                
       }).catch((error) => {
         console.log("Error", error);
       })
