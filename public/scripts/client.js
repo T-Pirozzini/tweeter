@@ -35,7 +35,7 @@ $(() => {
   const renderTweets = (tweets) => {    
       for (let tweet of tweets){      
         const newTweet = createTweetElement(tweet);
-        $tweetsContainer.append(newTweet);
+        $tweetsContainer.prepend(newTweet);
       }      
     };
 
@@ -76,9 +76,25 @@ $(() => {
       method: 'POST',
       data: data      
     });
+    // $tweetForm.val('').focus();
   });
 
-  
+  const loadTweets = () => {
+    $.ajax({
+      url: '/tweets',
+      method: 'GET'      
+    }).then((tweets) => { 
+        renderTweets(tweets);
+      }).catch((error) => {
+        console.log("Error", error);
+      })
+     };
+    
+     loadTweets();
 
 
-});
+
+});  
+
+
+
