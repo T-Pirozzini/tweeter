@@ -13,5 +13,6 @@ $(() => {
       this.form.counter.classList.add('counter-red');
     }   
   });
+  
 });
 

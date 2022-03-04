@@ -1,9 +1,3 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
 $(() => {  
   
   const data = [
@@ -30,16 +24,10 @@ $(() => {
     }
   ]
 
-  const $tweetsContainer = $('div.tweets-container');
-
-  // const escape = function (str) {
-  //   let div = document.createElement("div");
-  //   div.appendChild(document.createTextNode(str));
-  //   return div.innerHTML;
-  // };
+  const $tweetsContainer = $('div.tweets-container');  
 
   const renderTweets = (tweets) => {    
-      for (let tweet of tweets){      
+      for (let tweet of tweets) {      
         const newTweet = createTweetElement(tweet);
         $tweetsContainer.prepend(newTweet);
       }      
@@ -71,17 +59,12 @@ $(() => {
   const $tweetForm = $('form');
   
   $tweetForm.on('submit', function(event) {
-    event.preventDefault();    
-    console.log("Data", $tweetForm.serialize());
-    const data = $tweetForm.serialize();
-    console.log("The form was submitted");       
-
-    if (data.length <= 5) {
-      //alert("Please enter a tweet")
+    event.preventDefault();     
+    const data = $tweetForm.serialize();         
+    if (data.length <= 5) {      
       $(".no-text-error").html("Please enter a tweet").slideDown("slow");
       $(".max-text-error").hide();
-    } else if (data.length > 145) {
-      //alert("Your tweet has exceeded maximum length")
+    } else if (data.length > 145) {      
       $(".max-text-error").html("Your tweet is too long").slideDown("slow");
       $(".no-text-error").hide();
     } else {
@@ -91,8 +74,7 @@ $(() => {
         data: data      
       }).then(() => {
         $(".no-text-error").hide();
-        $(".max-text-error").hide();
-        console.log('Tweet sent successfully');        
+        $(".max-text-error").hide();                
         $('.tweet-text').val("").focus();
         loadTweets();
       });      
@@ -116,7 +98,6 @@ $(() => {
   $('.arrow-up').on('click', () => {
     $(window).scrollTop(top);
   });
-
 
 });  
 
