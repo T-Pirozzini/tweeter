@@ -3,9 +3,9 @@
 Tweeter is a simple, single-page Twitter clone.
 
 ## Final Product
-!["Desktop View"](URL)
-!["Tablet View"](URL)
-!["Scrolled View"](URL)
+!["Desktop View"](https://github.com/T-Pirozzini/tweeter/blob/master/public/docs/desktop-view.png?raw=true)
+!["Tablet View"](https://github.com/T-Pirozzini/tweeter/blob/master/public/docs/tablet-view.png?raw=true)
+!["Scrolled View"](https://github.com/T-Pirozzini/tweeter/blob/master/public/docs/scrolled-view.png?raw=true)
 
 ## Dependencies
 
