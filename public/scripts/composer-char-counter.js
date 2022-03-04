@@ -2,6 +2,7 @@ $(() => {
 
   const $tweetText = $('textarea');  
 
+  // tweet text area restrictions
   $tweetText.on('input', function() {    
     let textLength = $(this).val().length;    
     let maxLength = 140;

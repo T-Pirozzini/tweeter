@@ -1,5 +1,6 @@
 $(() => {  
   
+  // tweet database
   const data = [
     {
       "user": {
@@ -26,6 +27,7 @@ $(() => {
 
   const $tweetsContainer = $('div.tweets-container');  
 
+  // Render tweets to the tweets container
   const renderTweets = (tweets) => {    
       for (let tweet of tweets) {      
         const newTweet = createTweetElement(tweet);
@@ -33,8 +35,8 @@ $(() => {
       }      
     };
 
-  const createTweetElement = (object) => {
-    
+  // Create a new tweet 
+  const createTweetElement = (object) => {    
     const $tweet =
       `<article class="tweet-container">
            <section class="handler-container">         
@@ -58,6 +60,7 @@ $(() => {
 
   const $tweetForm = $('form');
   
+  // On tweet form submission - provide validation - ajax POST request - reload tweets
   $tweetForm.on('submit', function(event) {
     event.preventDefault();     
     const data = $tweetForm.serialize();         
@@ -81,6 +84,7 @@ $(() => {
     };    
   });
 
+  // ajax GET request
   const loadTweets = () => {
     $.ajax({
       url: '/tweets',
@@ -95,6 +99,7 @@ $(() => {
     
   loadTweets(); 
   
+  // Scroll to top event
   $('.arrow-up').on('click', () => {
     $(window).scrollTop(top);
   });
