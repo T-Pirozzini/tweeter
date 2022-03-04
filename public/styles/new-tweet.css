@@ -10,8 +10,8 @@
   justify-content: center;
 }
 .new-tweet-container {
-  width: 100%;
-  margin: auto;
+  width: 100%;  
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -117,7 +117,8 @@
     display: flex;      
   };  
   .new-tweet-container {
-    margin-right: 50px;        
+    margin-right: 50px;
+    margin: auto;        
   } 
   .main-container {    
     margin: 150px 50px 50px 50px;  
