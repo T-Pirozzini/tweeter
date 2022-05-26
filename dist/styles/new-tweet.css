@@ -1,0 +1,127 @@
+.main-container {
+  height: auto;
+  width: 90%;  
+  margin: auto;
+  background-color: #f4f1ec;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.new-tweet-container {
+  width: 100%;  
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   
+}
+.compose-title {  
+  text-align: center;
+  color: gray;
+  padding: 20px;
+  display: none; 
+}
+.label {
+  font-family: Roboto, sans-serif;
+  font-weight: 800;       
+}
+#tweet-text {
+  height: 40px;
+  width: 100%;
+  background-color:#f4f1ec;
+  outline: none; 
+  border: 0px;
+  border-bottom: 4px solid gray;
+  font-family: Roboto, sans-serif;
+  
+  padding-top: 10px;
+}
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0px;
+}
+.tweet-btn {
+  background-color: #4056A1;
+  color: white;
+  font-family: bungee, sans-serif;
+  font-weight: 400;
+  border-radius: 3px;
+}
+.counter {
+  font-family: bungee, sans-serif;
+  font-weight: 400;
+}
+.counter-red {
+  color: red;
+}
+.no-text-error {
+  width: 40%;
+  border: 4px solid red;
+  color: red;
+  margin-bottom: 20px;
+  font-family: Roboto, sans-serif;
+  text-align: center;
+  align-self: center; 
+  display: none;
+}
+.max-text-error {
+  width: 40%;
+  border: 4px solid red;
+  color: red;
+  margin-bottom: 20px;
+  font-family: Roboto, sans-serif;
+  text-align: center;
+  align-self: center;
+  display: none;
+}
+@keyframes updown {
+  0% {
+    transform: translateY(-30%);
+  }
+  50% {
+    transform: translateY(30%);
+  }
+  100% {
+    transform: translateY(-30%);
+  }
+}
+.arrow-up {
+  color: rgb(224, 39, 76);
+  animation: updown 2s ease infinite;
+  text-align: right;   
+}
+.arrow-up:hover {  
+  cursor: pointer;  
+  color: red;
+  font-weight: 800;
+}
+
+
+/* Tablet styles */
+@media only screen and (min-width: 768px) {
+  nav {
+    background-color: #E1AD01;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");    
+  }
+  .new-tweet-container {
+    margin-top: 50px;        
+  }
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  body {
+    display: flex;      
+  };  
+  .new-tweet-container {
+    margin-right: 50px;
+    margin: auto;        
+  } 
+  .main-container {    
+    margin: 150px 50px 50px 50px;  
+  }
+  nav {
+    background-color: #4056A1;
+    background-image: none;
+  } 
+}
